@@ -19,10 +19,10 @@ MonoBehaviour:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
+  - Left Hand Only
+  - Right Hand Only
+  - RayInteractorsOnly
+  - DirectInteractorsOnly
   - 
   - 
   - 
