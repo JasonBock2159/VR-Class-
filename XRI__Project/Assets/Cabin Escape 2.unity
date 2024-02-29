@@ -432,9 +432,29 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 612780787}
     m_Modifications:
+    - target: {fileID: 1206003118082876, guid: ea0b3a53d51d3f94a9b82aff7983c608, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1318753044608856, guid: ea0b3a53d51d3f94a9b82aff7983c608, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1327374635387866, guid: ea0b3a53d51d3f94a9b82aff7983c608, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1817989828873344, guid: ea0b3a53d51d3f94a9b82aff7983c608, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1838814048331682, guid: ea0b3a53d51d3f94a9b82aff7983c608, type: 3}
       propertyPath: m_Name
       value: DoorNarrowSolid
+      objectReference: {fileID: 0}
+    - target: {fileID: 1838814048331682, guid: ea0b3a53d51d3f94a9b82aff7983c608, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4944102135447920, guid: ea0b3a53d51d3f94a9b82aff7983c608, type: 3}
       propertyPath: m_LocalScale.x
@@ -495,13 +515,49 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4944102135447920, guid: ea0b3a53d51d3f94a9b82aff7983c608, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1790251274}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1838814048331682, guid: ea0b3a53d51d3f94a9b82aff7983c608, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1534385324}
   m_SourcePrefab: {fileID: 100100000, guid: ea0b3a53d51d3f94a9b82aff7983c608, type: 3}
 --- !u!4 &1534385321 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4944102135447920, guid: ea0b3a53d51d3f94a9b82aff7983c608, type: 3}
   m_PrefabInstance: {fileID: 1534385320}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1534385322 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4290045977357102, guid: ea0b3a53d51d3f94a9b82aff7983c608, type: 3}
+  m_PrefabInstance: {fileID: 1534385320}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1534385323 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1838814048331682, guid: ea0b3a53d51d3f94a9b82aff7983c608, type: 3}
+  m_PrefabInstance: {fileID: 1534385320}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1534385324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1534385323}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4990c2782658154182637c9e17ac903, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <AudioClipOnStart>k__BackingField: {fileID: 0}
+  <AudioClipOnEnd>k__BackingField: {fileID: 0}
+  featuredUsage: 0
+  doorPivot: {fileID: 1534385322}
+  maxAngle: 90
+  reverseAngleDirection: 0
+  doorSpeed: 1
+  open: 0
+  MakeKinematicOnOpen: 0
+  socketInteractor: {fileID: 0}
+  simpleInteractor: {fileID: 0}
 --- !u!1 &1650326959
 GameObject:
   m_ObjectHideFlags: 0
