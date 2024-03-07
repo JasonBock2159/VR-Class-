@@ -3,11 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum FeaturedUsage
-{
-    Once,//Use Once
-    Toggle//If we want to use the features more than once
-}
 
 
 

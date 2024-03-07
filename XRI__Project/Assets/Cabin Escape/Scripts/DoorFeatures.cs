@@ -58,37 +58,43 @@ public class DoorFeatures :CoreFeatures
         {
 
         });
-
+        //OpenDoor();
         
     }
 
-    public void OpenDoor()
-    {
-       //openDoor? false : true
+    public void OpenDoor() {
         
-        if (!open)
-        {
-            PlayOnStart();
-            open = true;
-            StartCoroutine(ProcessMotion());
-        }
-    }
 
-    private IEnumerator ProcessMotion()
-    {
-        var angle = doorPivot.localEulerAngles.y < 180 ? doorPivot.localEulerAngles.y : doorPivot.localEulerAngles.y - 360;
-        angle = reverseAngleDirection ? Mathf.Abs(angle) : angle;
-        if (angle<= maxAngle)
+
+            
+                //openDoor? false : true
+
+                if (!open)
+                {
+                    PlayOnStart();
+                    open = true;
+                    StartCoroutine(ProcessMotion());
+                }
+            }
+
+            private IEnumerator ProcessMotion()
+            {
+        while (open)
         {
-            doorPivot?.Rotate(Vector3.up,doorSpeed * Time.deltaTime *(reverseAngleDirection? -1 : 1));
+
+            var angle = doorPivot.localEulerAngles.y < 180 ? doorPivot.localEulerAngles.y : doorPivot.localEulerAngles.y - 360;
+            angle = reverseAngleDirection ? Mathf.Abs(angle) : angle;
+            if (angle <= maxAngle)
+            {
+                doorPivot?.Rotate(Vector3.up, doorSpeed * Time.deltaTime * (reverseAngleDirection ? -1 : 1));
+            }
+            else
+            {
+                open = false;
+                var featureRidgidBody = GetComponent<Rigidbody>();
+                if (featureRidgidBody != null && MakeKinematicOnOpen) featureRidgidBody.isKinematic = true;
+            }
+            yield return null;
+        } 
         }
-        else
-        {
-           open = false;
-            var featureRidgidBody = GetComponent<Rigidbody>();
-            if(featureRidgidBody != null && MakeKinematicOnOpen) featureRidgidBody.isKinematic = true;
-        }
-        yield return null;
-    }
-    
 }
